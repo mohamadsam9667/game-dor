@@ -1,144 +1,87 @@
-@import url(http://awebfont.ir/css?id=1116);   
 *{
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
 body{
-    font-family: 'B Yekan',tahoma,Arial;
-}
-
-.countainer{
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: nowrap;
-    
-}
-
-
-.header-top{
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
-    padding: 20px 0;
-    flex-wrap: nowrap;
-}
-
-.header-right{
-    display: flex;
-}
-
-.menu-list{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    padding-right: 50px;
-}
-
-.menu-item{
-    padding:10px 20px;
-    color: #999;
-}
-.menu-item:hover{
-    color: #288ed9;
-    transition: 1s;
-}
-.header-left{
-    display: flex;
-   
-}
-.header-left p{
-    padding: 5px 20px;
-    color:#288ed9;
+    background-color: #167448;
 
 }
-.header-left p:hover{
-    color: #080808;
-    transition: 1s;
-}
-.header-left .header-login{
-    background-color: #288ed9;
-    color: #fff;
-    border-radius: 30px;
-}
-
-
-
-.header-bottom{
-    display: flex;
-    align-items: center;
-}
-.header-bottom-right{
-   
-    width: 40%;
-}
-.title{
- margin: 5px 10px;
- color: #288ed9;
-}
-.desc{
-    margin: 15px;
-    color: #288ed9;
-}
-.info{
-    line-height: 27px;
-    color: #7e7e7e;
-    text-align: justify;
-}
-.header-bottom-left{
-   padding-right: 20px;
-    width: 60%;
-}
-
-.countainer2
-{
-    margin-top: 10px;
+ .container{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(145, 143, 143);
-  background-image: linear-gradient(
-        to bottom,
-       white,
-        rgb(89, 180, 210)
-    );
-    
-}
-.countainer2 .titre
-{
-    text-align: center;
-    margin: 20px;
+    width: 100vw;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
 }
 
-.container1-1
-{
-    margin-top: 20px ;
-    display: flex;
+.container .image{
+    margin-top: 140px;
+    width: 300px;
+    height: 300px;
     
 }
-.container1-1 .box
-{
-    text-align: center;
-    border: 1px solid rgb(124, 124, 124);
-    margin: 10px;
+.container .image img{
+    margin-top: 10%;
+
+    width: 300px;
+    height: 300px;
+    border-radius:620%;
+}
+
+
+.container .welcome{
+    background-color: #FCF7D7;
     border-radius: 10px;
+    padding: 2%;
+    margin-top: 50px;
+
+
+}
+.container .welcome h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+
 }
 
-.container1-1 .box h1{
-    background-color: #288ed9;
-    border: 1px solid rgb(124, 124, 124);
-    color: white;
-    border-radius: 40px;
-    margin-top: -20px;
+.container .text_alert{
+
+    display: flex;
+    margin-top:60px;
+    direction: rtl;
+    width: 80%;
+    color: #FCF7D7;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content:center;
+    align-items: center;   
     
 }
-.container1-1 .box p{
-    line-height: 27px;
-    margin: 10px;
+
+.container input{
+    margin-top:20px;
+    width: 75%;
+    height: 40px;
+    padding: 10px;
+    background-color: #FCF7D7;
+    border-radius: 10px;
 
 }
+input::placeholder{
+    text-align: end;
+    font-size: 20px;
+ }
 
-
-
-
-
+ .container button{
+    margin-top: 30px;
+    width: 50%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FCF7D7;
+    color: #167448;
+    font-size: 25px;
+}
