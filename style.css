@@ -10,7 +10,7 @@ body{
 }
  .container{
     margin-top: 80px;
-    display:none;
+    display:flex;
     flex-direction: column;
     width: 100vw;
     height: 400px;

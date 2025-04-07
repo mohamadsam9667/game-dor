@@ -127,17 +127,17 @@ const partAddUser = document.querySelector('.container1');
 const users = document.querySelector('.users');
 const addButton = document.querySelector('.addButton');
 const nameUser = document.querySelector('#nameUser');
+const teamsDiv = document.querySelector('.teams');
 const startBtn = document.querySelector('.startBtn');
 
-const playerList=document.querySelector('.player')
+
+const playerList=document.querySelector('.players')
 const nextBtnWord=document.querySelector('.next')
 const wordShow=document.querySelector('.word')
 const nameUserShow=document.querySelector('.nameUser')
 const acceptTick=document.querySelector('.accept')
 const navbarTimer=document.querySelector('.navbarTime')
-        
-
-
+    
 let wordsLevelOne=[
     {word:"میز",score:10},
     {word:"کباب پز ",score:10},
@@ -149,8 +149,6 @@ let wordsLevelOne=[
 
 let gamers = [];
 let totalPlayers = 0;
-
-
 
 
 btnRegister.addEventListener('click', function () {
@@ -248,14 +246,13 @@ function getTeamColor(index, total) {
     }
     return 'gray';
 }
-
-
 // start game 
 
-const teamsDiv = document.querySelector('.teams');
 
 // هر بار بازیکن اضافه شد، چک کن تعدادش رسید یا نه
 function generateUser(name, count) {
+
+
     const teamColor = getTeamColor(gamers.length, count);
 
     const div = document.createElement('div');
@@ -304,7 +301,30 @@ startBtn.addEventListener('click',function(){
 
     gamers.forEach(function(player){
 
+        //error existe 
+        // let numberRandomIndex=(int)(Math.random() * 4);
 
+        
+        // wordsLevelOne[1][numberRandomIndex]
+
+        playerList.insertAdjacentHTML("beforeend", `
+            
+            <div class="player">
+            
+                <div class="topPart">
+                   <img class="next" src="./images/icons8-next-50.png" alt="">
+                    <h3 class="word">a</h3>
+                    <h2 class="nameUser">${player}</h2>
+                    <img class="accept" src="./images/icons8-tick-50.png" alt="">      
+               </div>
+               
+                   <div class="navbarTime">
+                   <h4>100s</h4>
+                   </div>
+               
+            </div> 
+            
+            `);
 
         console.log(player)
     
