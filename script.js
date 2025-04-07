@@ -129,8 +129,13 @@ const addButton = document.querySelector('.addButton');
 const nameUser = document.querySelector('#nameUser');
 const startBtn = document.querySelector('.startBtn');
 
-
-
+const playerList=document.querySelector('.player')
+const nextBtnWord=document.querySelector('.next')
+const wordShow=document.querySelector('.word')
+const nameUserShow=document.querySelector('.nameUser')
+const acceptTick=document.querySelector('.accept')
+const navbarTimer=document.querySelector('.navbarTime')
+        
 
 
 let wordsLevelOne=[
@@ -299,7 +304,7 @@ startBtn.addEventListener('click',function(){
 
     gamers.forEach(function(player){
 
-        
+
 
         console.log(player)
     

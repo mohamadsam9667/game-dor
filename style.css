@@ -10,7 +10,7 @@ body{
 }
  .container{
     margin-top: 80px;
-    display:FLEX;
+    display:none;
     flex-direction: column;
     width: 100vw;
     height: 400px;
@@ -229,6 +229,71 @@ border: 6px solid green;
     background-color: #FCF7D7;
 
     
+}
+
+
+
+.players{
+    display: flex;
+    width: 100%;
+    background-color:#167448;
+    flex-direction: column;
+    
+}
+.player{
+    display: flex;
+    flex-direction: column;
+}
+.player .topPart{
+    display: flex;
+    flex-direction: row;
+}
+.player .partBottom{
+    display: flex;
+    flex-direction: row;
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #FCF7D7;
+}
+
+.player .accept,.nameUser,.word,.next{
+padding: 25px;
+}
+
+.player .nameUser{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #309bff;
+    border:2px solid #167448;
+    border-radius: 10px;
+    height: 20px;
+    
+}
+
+.player .navbarTime{
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 80%;
+    border: 5px solid #309bff ;
+    background-color: #309bff;
+
+}
+.player .navbarTime h4{
+    text-align: center;
+    display: block;
+
+    /* justify-content: center;  */
+    margin: auto;   
 }
 
 
