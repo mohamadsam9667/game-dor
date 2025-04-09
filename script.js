@@ -138,6 +138,8 @@ const nameUserShow=document.querySelector('.nameUser')
 const acceptTick=document.querySelector('.accept')
 const navbarTimer=document.querySelector('.navbarTime')
     
+console.log(nextBtnWord)
+
 let wordsLevelOne=[
     {word:"میز",score:10},
     {word:"کباب پز ",score:10},
@@ -290,7 +292,7 @@ function generateUser(name, count) {
 
 
 
-
+let count=0
 startBtn.addEventListener('click',function(){
 
     containerStart.style.display = "none";
@@ -298,6 +300,7 @@ startBtn.addEventListener('click',function(){
     addButton.style.display='none';
     users.style.display='none'
     startBtn.style.display = 'none';
+
 
     gamers.forEach(function(player){
 
@@ -307,13 +310,14 @@ startBtn.addEventListener('click',function(){
         
         // wordsLevelOne[1][numberRandomIndex]
 
+        // در این بخش باید اینزرت ادجاست اچ تی ام ال رو بزرگ ترش کنیم
         playerList.insertAdjacentHTML("beforeend", `
-            
             <div class="player">
             
                 <div class="topPart">
                    <img class="next" src="./images/icons8-next-50.png" alt="">
-                    <h3 class="word">a</h3>
+                   
+                    <h3 class="word">${wordsLevelOne[count].word}</h3>   
                     <h2 class="nameUser">${player}</h2>
                     <img class="accept" src="./images/icons8-tick-50.png" alt="">      
                </div>
@@ -326,8 +330,16 @@ startBtn.addEventListener('click',function(){
             
             `);
 
-        console.log(player)
+            
+                    // nextBtnWord.addEventListener('click',function(){
+                    //     count++;
+                        
+                    // })
+            
+            
+        console.log(player,nextBtnWord)
     
+            count++;
     })
     
     
