@@ -132,13 +132,13 @@ const startBtn = document.querySelector('.startBtn');
 
 
 const playerList=document.querySelector('.players')
-const nextBtnWord=document.querySelector('.next')
-const wordShow=document.querySelector('.word')
-const nameUserShow=document.querySelector('.nameUser')
-const acceptTick=document.querySelector('.accept')
-const navbarTimer=document.querySelector('.navbarTime')
+// const nextBtnWord=document.querySelector('.next')
+// const wordShow=document.querySelector('.word')
+// const nameUserShow=document.querySelector('.nameUser')
+// const acceptTick=document.querySelector('.accept')
+// const navbarTimer=document.querySelector('.navbarTime')
     
-console.log(nextBtnWord)
+// console.log(nextBtnWord)
 
 let wordsLevelOne=[
     {word:"میز",score:10},
@@ -146,6 +146,102 @@ let wordsLevelOne=[
     {word:"کتاب",score:10},
     {word:"موز ",score:10},
     {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    {word:"میز",score:10},
+    {word:"کباب پز ",score:10},
+    {word:"کتاب",score:10},
+    {word:"موز ",score:10},
+    {word:"دفتر",score:10},
+    
 ]
 
 
@@ -304,48 +400,66 @@ startBtn.addEventListener('click',function(){
 
     gamers.forEach(function(player){
 
-        //error existe 
-        // let numberRandomIndex=(int)(Math.random() * 4);
+       
+            let newDivPlayer=document.createElement('div')
+            let newDivTopPart=document.createElement('div')
+            let newImgNext=document.createElement('img')
+            let newH3Word=document.createElement('h3')
+            let newH2NameUser=document.createElement('h2')
+            let newImgAccept=document.createElement('img')
+            let newNavbarTime=document.createElement('div')
+            let newTime=document.createElement('h4')
+            
+            //class name HTML tag
+            newDivPlayer.className='player';
+            newDivTopPart.className='topPart'
+            newImgNext.className='next'
+            newH3Word.className='word'
+            newH2NameUser.className='nameUser'
+            newImgAccept.className='accept'
+            newNavbarTime.className='navbarTime'
+            
 
-        
-        // wordsLevelOne[1][numberRandomIndex]
 
-        // در این بخش باید اینزرت ادجاست اچ تی ام ال رو بزرگ ترش کنیم
-        playerList.insertAdjacentHTML("beforeend", `
-            <div class="player">
-            
-                <div class="topPart">
-                   <img class="next" src="./images/icons8-next-50.png" alt="">
-                   
-                    <h3 class="word">${wordsLevelOne[count].word}</h3>   
-                    <h2 class="nameUser">${player}</h2>
-                    <img class="accept" src="./images/icons8-tick-50.png" alt="">      
-               </div>
-               
-                   <div class="navbarTime">
-                   <h4>100s</h4>
-                   </div>
-               
-            </div> 
-            
-            `);
+
+            //content in tag 
+            newH3Word.innerHTML=wordsLevelOne[count].word
+            newH2NameUser.innerHTML=player
+
+            //add src image
+            newImgNext.src = "./images/icons8-next-50.png";
+            newImgAccept.src = "./images/icons8-tick-50.png";
+
 
             
-                    // nextBtnWord.addEventListener('click',function(){
-                    //     count++;
-                        
-                    // })
+            newDivTopPart.append(newImgNext,newH3Word,newH2NameUser,newImgAccept)
+            newNavbarTime.append(newTime)
+            newDivPlayer.append(newDivTopPart, newNavbarTime);
+            playerList.appendChild(newDivPlayer);
+
+
             
             
-        console.log(player,nextBtnWord)
-    
+            
+            
+            newImgNext.addEventListener('click',function(){
+                nextWord(newH3Word)
+            })
+            
             count++;
-    })
+        });
     
     
 
 
 })
+
+function nextWord(h3){
+    let NumberRandom=Math.floor(Math.random()*100)
+    console.log(NumberRandom)
+    h3.innerHTML=wordsLevelOne[NumberRandom].word
+
+}
 
 
 // رویداد شروع بازی
