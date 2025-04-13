@@ -1155,7 +1155,6 @@ function getWordsByLevel(level) {
 
                     
                     gamers.forEach(function(player){
-                        
                         console.log(player)
                         
                         
@@ -1200,7 +1199,8 @@ function getWordsByLevel(level) {
                         //     console.log(words[NumberRandom].word)                            
                         // });
                         
-                                                
+                        let intervalId = null;
+                                            
                         let timeLeft = 60;
                         if(counterPlayer==4){
                         if(player==gamers[0]||player==gamers[2]){
@@ -1220,9 +1220,47 @@ function getWordsByLevel(level) {
                             
                             console.log('timer')
                         
-                        }
-                    }
+                            newH3Word.addEventListener('click',function(){
+                                if(player==gamers[0]||gamers[2]){
+                                    clearInterval(intervalId);
+                                    count++
+                                    console.log(words[count].word)
 
+                                }
+                                
+                            });
+                        }
+                        
+                        // let intervalId = null;  // فقط یه بار تعریف بیرون از شرط
+                        // let timeLeft = 60;
+                        
+                        // if (counterPlayer == 4) {
+                        //   if (player == gamers[0] || player == gamers[2]) {
+                        //     // فقط یک بار مقدار دهی
+                        //     intervalId = setInterval(() => {
+                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                        //       newTime.innerHTML = timeLeft + "s";
+                        //       timeLeft--;
+                        
+                        //       if (timeLeft < 0) {
+                        //         clearInterval(intervalId);
+                        //         console.log("نوبت تموم شد!");
+                        //         // رفتن به نوبت بعدی...
+                        //       }
+                        //     }, 1000);
+                        
+                        //     console.log("timer");
+                        
+                        //     newH3Word.addEventListener("click", function () {
+                        //       clearInterval(intervalId);  // تایمر رو متوقف کن
+                        //       count++;
+                        //       console.log(words[count].word);
+                        //     });
+                        //   }
+                        // }
+                        
+
+                    }
 
 
 
