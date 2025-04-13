@@ -1150,11 +1150,13 @@ function getWordsByLevel(level) {
                     
                     
                     let counterPlayer=gamers.length
+                    console.log(counterPlayer)
+                    
+
                     
                     gamers.forEach(function(player){
                         
-                        
-                        
+                        console.log(player)
                         
                         
                         let newDivPlayer=document.createElement('div')
@@ -1194,13 +1196,36 @@ function getWordsByLevel(level) {
                         newDivPlayer.append(newDivTopPart, newNavbarTime);
                         playerList.appendChild(newDivPlayer);
                         
-                        newH3Word.addEventListener('click',function(){
+                        // newH3Word.addEventListener('click',function(){
+                        //     console.log(words[NumberRandom].word)                            
+                        // });
+                        
+                                                
+                        let timeLeft = 60;
+                        if(counterPlayer==4){
+                        if(player==gamers[0]||player==gamers[2]){
+
+                            let intervalId = setInterval(() => {
+                              console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                              newTime.innerHTML=timeLeft+"s"
+                              timeLeft--;
                             
-                        });
+                              if (timeLeft < 0) {
+                                clearInterval(intervalId);
+                                console.log("نوبت تموم شد!");
+                                // رفتن به نوبت بعدی...
+                              }
+                            }, 1000);
+                            
+                            
+                            console.log('timer')
                         
-                        
-                        
-                        
+                        }
+                    }
+
+
+
+
                         newImgNext.addEventListener('click',function(){
                             // let words=getWordsByLevel(selectorLevel.value)
                             nextWord(newH3Word,words)
