@@ -265,6 +265,10 @@ border: 6px solid green;
 .player .accept,.nameUser,.word,.next{
 padding: 25px;
 }
+.player .word{
+    border-radius:60px;
+    border: 2px solid green;
+}
 
 .player .nameUser{
     display: flex;
