@@ -118,6 +118,82 @@
 
 
 
+
+    
+                        // newH3Word.addEventListener('click',function(){
+                        //     console.log(words[NumberRandom].word)                            
+                        // });
+                        
+                        // let intervalId = null;
+                                            
+                        // let timeLeft = 60;
+                        // if(counterPlayer==4){
+                        // if(player==gamers[0]||player==gamers[2]){
+
+                        //     let intervalId = setInterval(() => {
+                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                        //       newTime.innerHTML=timeLeft+"s"
+                        //       timeLeft--;
+                            
+                        //       if (timeLeft < 0) {
+                        //         clearInterval(intervalId);
+                        //         console.log("نوبت تموم شد!");
+
+                              
+                        //         // رفتن به نوبت بعدی...
+                              
+                        //     }
+                            
+                        // }, 1000);
+                            
+                            
+                        //     console.log('timer')
+                        
+                        //     newH3Word.addEventListener('click',function(){
+                        //         if(player==gamers[0]||gamers[2]){
+                        //             clearInterval(intervalId);
+                        //             count++
+                        //             console.log(words[count].word)
+
+                        //         }
+                                
+                            // });
+                        // }
+                        
+                        // let intervalId = null;  // فقط یه بار تعریف بیرون از شرط
+                        // let timeLeft = 60;
+                        
+                        // if (counterPlayer == 4) {
+                        //   if (player == gamers[0] || player == gamers[2]) {
+                        //     // فقط یک بار مقدار دهی
+                        //     intervalId = setInterval(() => {
+                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                        //       newTime.innerHTML = timeLeft + "s";
+                        //       timeLeft--;
+                        
+                        //       if (timeLeft < 0) {
+                        //         clearInterval(intervalId);
+                        //         console.log("نوبت تموم شد!");
+                        //         // رفتن به نوبت بعدی...
+                        //       }
+                        //     }, 1000);
+                        
+                        //     console.log("timer");
+                        
+                        //     newH3Word.addEventListener("click", function () {
+                        //       clearInterval(intervalId);  // تایمر رو متوقف کن
+                        //       count++;
+                        //       console.log(words[count].word);
+                        //     });
+                        //   }
+                        // }
+                        
+
+                    
+
+
+
+
 /// code ai complated 
 const btnRegister = document.querySelector(".register");
 const containerStart = document.querySelector(".container");
@@ -457,50 +533,50 @@ let wordsLevelOne = [
 
 
 const wordsLevelTwo = [
-    { word: "روغن موتور", score: 20 },
-    { word: "شکلات ژله‌ای", score: 20 },
-    { word: "تصویر کوچک‌شده", score: 20 },
-    { word: "ماهی خزه‌ای", score: 20 },
-    { word: "مانیتور پررنگ", score: 20 },
-    { word: "هدفون بی‌سیم", score: 20 },
-    { word: "ماوس پد", score: 20 },
-    { word: "کیبورد مکانیکی", score: 20 },
-    { word: "شارژر القایی", score: 20 },
-    { word: "پاوربانک", score: 20 },
-    { word: "هارد اکسترنال", score: 20 },
-    { word: "فلش مموری", score: 20 },
-    { word: "سیم کارت", score: 20 },
-    { word: "باتری کتابی", score: 20 },
-    { word: "ریموت کنترل", score: 20 },
-    { word: "ساعت هوشمند", score: 20 },
-    { word: "بند ساعت", score: 20 },
-    { word: "عینک آفتابی", score: 20 },
-    { word: "کرم ضدآفتاب", score: 20 },
-    { word: "ژل اصلاح", score: 20 },
-    { word: "مایع دستشویی", score: 20 },
-    { word: "خوشبوکننده هوا", score: 20 },
-    { word: "حوله حمام", score: 20 },
-    { word: "لیف حمام", score: 20 },
-    { word: "شانه سر", score: 20 },
-    { word: "سشوار", score: 20 },
-    { word: "اتو مو", score: 20 },
-    { word: "ماشین ریش‌تراش", score: 20 },
-    { word: "مسواک برقی", score: 20 },
-    { word: "نخ دندان", score: 20 },
-    { word: "دهانشویه", score: 20 },
-    { word: "کرم مرطوب‌کننده", score: 20 },
-    { word: "عطر اسپری", score: 20 },
-    { word: "دئودورانت", score: 20 },
-    { word: "برس آرایش", score: 20 },
-    { word: "سایه چشم", score: 20 },
-    { word: "رژ لب", score: 20 },
-    { word: "خط چشم", score: 20 },
-    { word: "ماسک صورت", score: 20 },
-    { word: "لاک ناخن", score: 20 },
-    { word: "پد پاک‌کننده", score: 20 },
-    { word: "تونر پوست", score: 20 },
-    { word: "سرم صورت", score: 20 },
-    { word: "کرم پودر", score: 20 },
+    { word: "روغن موتور", score: 20,time:60 },
+    { word: "شکلات ژله‌ای", score: 20 ,time:60},
+    { word: "تصویر کوچک‌شده", score: 20,time:60 },
+    { word: "ماهی خزه‌ای", score: 20,time:60 },
+    { word: "مانیتور پررنگ", score: 20,time:60 },
+    { word: "هدفون بی‌سیم", score: 20,time:60 },
+    { word: "ماوس پد", score: 20,time:60 },
+    { word: "کیبورد مکانیکی", score: 20,time:60 },
+    { word: "شارژر القایی", score: 20,time:60 },
+    { word: "پاوربانک", score: 20,time:60 },
+    { word: "هارد اکسترنال", score: 20,time:60 },
+    { word: "فلش مموری", score: 20,time:60 },
+    { word: "سیم کارت", score: 20,time:60 },
+    { word: "باتری کتابی", score: 20,time:60 },
+    { word: "ریموت کنترل", score: 20,time:60 },
+    { word: "ساعت هوشمند", score: 20,time:60 },
+    { word: "بند ساعت", score: 20,time:60 },
+    { word: "عینک آفتابی", score: 20,time:60 },
+    { word: "کرم ضدآفتاب", score: 20,time:60 },
+    { word: "ژل اصلاح", score: 20,time:60 },
+    { word: "مایع دستشویی", score: 20,time:60 },
+    { word: "خوشبوکننده هوا", score: 20,time:60 },
+    { word: "حوله حمام", score: 20 ,time:60},
+    { word: "لیف حمام", score: 20,time:60 },
+    { word: "شانه سر", score: 20 ,time:60},
+    { word: "سشوار", score: 20,time:60 },
+    { word: "اتو مو", score: 20,time:60 },
+    { word: "ماشین ریش‌تراش", score: 20,time:60 },
+    { word: "مسواک برقی", score: 20 ,time:60},
+    { word: "نخ دندان", score: 20 ,time:60},
+    { word: "دهانشویه", score: 20,time:60 },
+    { word: "کرم مرطوب‌کننده", score: 20 ,time:60},
+    { word: "عطر اسپری", score: 20,time:60 },
+    { word: "دئودورانت", score: 20,time:60 },
+    { word: "برس آرایش", score: 20,time:60 },
+    { word: "سایه چشم", score: 20,time:60 },
+    { word: "رژ لب", score: 20,time:60 },
+    { word: "خط چشم", score: 20,time:60 },
+    { word: "ماسک صورت", score: 20 ,time:60},
+    { word: "لاک ناخن", score: 20,time:60 },
+    { word: "پد پاک‌کننده", score: 20,time:60 },
+    { word: "تونر پوست", score: 20,time:60 },
+    { word: "سرم صورت", score: 20,time:60 },
+    { word: "کرم پودر", score: 20 ,time:60},
     { word: "کانسیلر", score: 20 },
     { word: "رژگونه", score: 20 },
     { word: "هایلایتر", score: 20 },
@@ -974,7 +1050,9 @@ const wordsLevelTwo = [
 
 
 
-let gamers = [];
+let gamers = [
+
+];
 let totalPlayers = 0;
 
 
@@ -1194,73 +1272,7 @@ function getWordsByLevel(level) {
                         newNavbarTime.append(newTime)
                         newDivPlayer.append(newDivTopPart, newNavbarTime);
                         playerList.appendChild(newDivPlayer);
-                        
-                        // newH3Word.addEventListener('click',function(){
-                        //     console.log(words[NumberRandom].word)                            
-                        // });
-                        
-                        let intervalId = null;
-                                            
-                        let timeLeft = 60;
-                        if(counterPlayer==4){
-                        if(player==gamers[0]||player==gamers[2]){
-
-                            let intervalId = setInterval(() => {
-                              console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
-                              newTime.innerHTML=timeLeft+"s"
-                              timeLeft--;
-                            
-                              if (timeLeft < 0) {
-                                clearInterval(intervalId);
-                                console.log("نوبت تموم شد!");
-                                // رفتن به نوبت بعدی...
-                              }
-                            }, 1000);
-                            
-                            
-                            console.log('timer')
-                        
-                            newH3Word.addEventListener('click',function(){
-                                if(player==gamers[0]||gamers[2]){
-                                    clearInterval(intervalId);
-                                    count++
-                                    console.log(words[count].word)
-
-                                }
-                                
-                            });
-                        }
-                        
-                        // let intervalId = null;  // فقط یه بار تعریف بیرون از شرط
-                        // let timeLeft = 60;
-                        
-                        // if (counterPlayer == 4) {
-                        //   if (player == gamers[0] || player == gamers[2]) {
-                        //     // فقط یک بار مقدار دهی
-                        //     intervalId = setInterval(() => {
-                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
-                        //       newTime.innerHTML = timeLeft + "s";
-                        //       timeLeft--;
-                        
-                        //       if (timeLeft < 0) {
-                        //         clearInterval(intervalId);
-                        //         console.log("نوبت تموم شد!");
-                        //         // رفتن به نوبت بعدی...
-                        //       }
-                        //     }, 1000);
-                        
-                        //     console.log("timer");
-                        
-                        //     newH3Word.addEventListener("click", function () {
-                        //       clearInterval(intervalId);  // تایمر رو متوقف کن
-                        //       count++;
-                        //       console.log(words[count].word);
-                        //     });
-                        //   }
-                        // }
-                        
-
-                    }
+                    
 
 
 
@@ -1270,11 +1282,90 @@ function getWordsByLevel(level) {
                         })
             
                         count++;
+                    
+                    
                     });
                     
+                    // if(gamers.length==4){
+                    //     let currentTime = 60; // زمان شروع برای هر بازیکن
+                    //     let currentPlayer = 0;
+                    //         index=0
+                    //         for(let i =0;i<=gamers.length;i++){
+
+                    //             if(i==0||i==2){
+
+                                        
+                    //                     setInterval(()=>{
+                    //                         let navbarTime=document.querySelector('.navbarTime')
+                    //                         navbarTime.innerHTML=currentTime +'s';
+
+                    //                         currentTime--;
+        
+                    //                         // وقتی زمان بازیکن تمام شد
+                    //                         if (currentTime < 0) {
+                    //                             currentTime = 60; // ریست زمان برای بازیکن بعدی
+                    //                             currentPlayer = (currentPlayer + 1) % 4; // رفتن به بازیکن بعدی (0,1,2,3,0,...)
+                                              
+                                                
+                    //                             // اگر همه بازیکنان بازی کردند (اختیاری)
+                    //                             if (currentPlayer === 0) {
+                    //                                 // اینجا می‌توانید دور بعدی بازی را شروع کنید
+                    //                             }
+                    //                         }
+
+
+
+                    //                     },1000)
+                    //                     index++;
+                                        
+
+
+                    //                 console.log(gamers[i]+" heb da")
+                    //             }
+                    //             // }else if(){
+                    //             //     console.log(gamers[i]+"dssdmhksakk")
+                    //             // }
+                                
+                    //         }
+
+
+                    // }
                     
+                    if (gamers.length === 4) {
+                        let currentTime = 60;
+                        let activePlayers = [0, 2];
+                        let currentActiveIndex = 0;
+                        
+                        // نمایش همه بازیکنان
+                        document.querySelectorAll('.player').forEach(player => {
+                            player.style.display = 'block';
+                        });
+                        
+                        // غیرفعال کردن تایمرهای دیگر
+                        document.querySelectorAll('.navbarTime').forEach((timer, index) => {
+                            if (!activePlayers.includes(index)) {
+                                timer.innerHTML = "غیرفعال";
+                            }
+                        });
+                        
+                        const gameTimer = setInterval(() => {
+                            const currentPlayer = activePlayers[currentActiveIndex];
+                            const currentTimer = document.querySelectorAll('.navbarTime')[currentPlayer];
+                            currentTimer.innerHTML = currentTime + 's';
+                            currentTime--;
+                            
+                            if (currentTime < 0) {
+                                currentTime = 60;
+                                currentActiveIndex = (currentActiveIndex + 1) % activePlayers.length;
+                                
+                                // اختیاری: انجام عملیات هنگام تعویض بازیکن
+                                console.log(`نوبت ${gamers[activePlayers[currentActiveIndex]]}`);
+                            }
+                        }, 1000);
+                    }
+            
                     
-                    
+
                 })
                 
                 function nextWord(h3,words){
@@ -1285,28 +1376,4 @@ function getWordsByLevel(level) {
                 }
                 
 
-                // رویداد شروع بازی
-                
-                // function startTimer(seconds) {
-                    //     timerDiv.style.display = 'block';
-                    //     let timeLeft = seconds;
-                    //     timerDiv.innerText = `زمان باقی‌مانده: ${timeLeft} ثانیه`;
-                    
-                    //     const countdown = setInterval(() => {
-                        //         timeLeft--;
-                        //         timerDiv.innerText = `زمان باقی‌مانده: ${timeLeft} ثانیه`;
-                        
-                        //         if (timeLeft <= 0) {
-                            //             clearInterval(countdown);
-                            //             timerDiv.innerText = 'زمان تموم شد!';
-//             // اینجا می‌تونی مرحله بعدی بازی رو صدا بزنی
-//             setTimeout(() => {
-//                 alert("برو مرحله بعد 😎");
-//                 // اینجا تو می‌تونی هر کاری بخوای انجام بدی
-//             }, 1000);
-//         }
-//     }, 1000);
-// }
-// startGameButton.addEventListener('click', function () {
-//     startTimer(10); // اینجا مدت تایمر به ثانیه مشخص شده (مثلاً 10 ثانیه)
-// });
+        
