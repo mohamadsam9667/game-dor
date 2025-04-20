@@ -1331,38 +1331,73 @@ function getWordsByLevel(level) {
 
                     // }
                     
+                    let isFlag=true
                     if (gamers.length === 4) {
-                        let currentTime = 60;
-                        let activePlayers = [0, 2];
-                        let currentActiveIndex = 0;
+
+                        let curetnTime=60
+                        let index=0;
                         
+                        document.querySelector(".accept").addEventListener('click',function(){
+                                setInterval(() => {
+                            
+                            if(isFlag){
+                                    console.log(gamers[index],curetnTime)
+                                    // curetnTime=60
+                                    index++;
+                                    curetnTime--;
+                                    
+                                    if(curetnTime<=0){
+                                        clearInterval()
+                                        
+                                    }
+                                }
+                            })
+                                
+                            },10000);   
+
+
+
+
+
+                    }
+
+
+
+                        // let currentTime = 60;
+                        // let activePlayers = [0, 2];
+                        // let currentActiveIndex = 0;
+                        
+
+
+
                         // نمایش همه بازیکنان
-                        document.querySelectorAll('.player').forEach(player => {
-                            player.style.display = 'block';
-                        });
+                        // document.querySelectorAll('.player').forEach(player => {
+                        //     player.style.display = 'block';
+                        // });
                         
                         // غیرفعال کردن تایمرهای دیگر
-                        document.querySelectorAll('.navbarTime').forEach((timer, index) => {
-                            if (!activePlayers.includes(index)) {
-                                timer.innerHTML = "غیرفعال";
-                            }
-                        });
+                        // document.querySelectorAll('.navbarTime').forEach((timer, index) => {
+                        //     if (!activePlayers.includes(index)) {
+                        //         timer.innerHTML = "غیرفعال";
+                        //     }
+                        // });
                         
-                        const gameTimer = setInterval(() => {
-                            const currentPlayer = activePlayers[currentActiveIndex];
-                            const currentTimer = document.querySelectorAll('.navbarTime')[currentPlayer];
-                            currentTimer.innerHTML = currentTime + 's';
-                            currentTime--;
+
+
+                        // const gameTimer = setInterval(() => {
+                        //     const currentPlayer = activePlayers[currentActiveIndex];
+                        //     const currentTimer = document.querySelectorAll('.navbarTime')[currentPlayer];
+                        //     currentTimer.innerHTML = currentTime + 's';
+                        //     currentTime--;
                             
-                            if (currentTime < 0) {
-                                currentTime = 60;
-                                currentActiveIndex = (currentActiveIndex + 1) % activePlayers.length;
+                        //     if (currentTime < 0) {
+                        //         currentTime = 60;
+                        //         currentActiveIndex = (currentActiveIndex + 1) % activePlayers.length;
                                 
-                                // اختیاری: انجام عملیات هنگام تعویض بازیکن
-                                console.log(`نوبت ${gamers[activePlayers[currentActiveIndex]]}`);
-                            }
-                        }, 1000);
-                    }
+                        //         // اختیاری: انجام عملیات هنگام تعویض بازیکن
+                        //         console.log(`نوبت ${gamers[activePlayers[currentActiveIndex]]}`);
+                        //     }
+                        // }, 1000);
             
                     
 
@@ -1374,6 +1409,6 @@ function getWordsByLevel(level) {
                     h3.innerHTML=words[NumberRandom].word
                     
                 }
-                
 
-        
+
+

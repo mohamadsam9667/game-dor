@@ -300,5 +300,9 @@ padding: 25px;
     margin: auto;   
 }
 
+.sam{
+    
+    --rotateZ: 3.780000000000004deg; transform: rotateZ(var(--rotateZ)); --e-transform-transition-duration: 100ms;       این استایلو به یع عکس بدی بعد اسکرول چه اتفاقی می افته
+}
 
 

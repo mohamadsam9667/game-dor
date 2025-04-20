@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چرخش عکس با اسکرول</title>
+    <style>
+        body {
+            height: 200vh; /* صفحه بلند برای اسکرول */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: #cf6969;
+        }
+        
+        .container {
+            text-align: center;
+            margin: 50px;
+        }
+        
+        .rotating-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 100ms ease-out;
+            transform: rotateZ(10deg);
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .scroll-info {
+            margin-top: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>عکس چرخان با اسکرول</h1>
+        <img id="rotatingImg" class="rotating-image" src="./images/icons8-plus-100.png" alt="تصویر نمونه">
+        <p class="scroll-info">صفحه را اسکرول کنید تا عکس بچرخد</p>
+    </div>
+
+    <script>
+        const rotatingImg = document.getElementById('rotatingImg');
+        
+        window.addEventListener('scroll', function() {
+            // محاسبه میزان اسکرول (بین 0 تا 1)
+            const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            
+            // تبدیل میزان اسکرول به زاویه چرخش (بین 0 تا 360 درجه)
+            const rotationAngle = scrollPercentage * 360;
+            
+            // اعمال چرخش به عکس
+            rotatingImg.style.transform = `rotateZ(${rotationAngle}deg)`;
+            
+            // برای چرخش محدودتر می‌توانید از این استفاده کنید:
+            // const limitedRotation = scrollPercentage * 180; // حداکثر 180 درجه
+            // rotatingImg.style.transform = `rotateZ(${limitedRotation}deg)`;
+        });
+    </script>
+</body>
+</html>
