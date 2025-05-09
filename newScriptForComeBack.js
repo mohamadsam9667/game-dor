@@ -1,3 +1,197 @@
+// // alert("sam");
+
+// const btnRegister=document.querySelector(".register");
+// const containerStart=document.querySelector(".container")
+// const inputNumber=document.querySelector('input')
+// const selectorLevel=document.querySelector('#levelSelector')
+// const partAddUser=document.querySelector('.container1')
+// const users=document.querySelector('.users')
+// const addButton=document.querySelector('.addButton')
+// const nameUser=document.querySelector('#nameUser')
+
+// let gamers=[]
+
+// btnRegister.addEventListener('click',function(){
+//     // console.log("sam")
+//     const playerCount=inputNumber.value.trim();
+
+//     if (playerCount === "") {
+//         alert("لطفا تعداد بازیکنان را وارد کنید");
+//         return;
+//     }
+
+
+//     const number = parseInt(playerCount, 10);
+//     if (isNaN(number) || number <= 0 ) {
+//         alert("لطفا یک عدد معتبر وارد کنید (بزرگتر از 0)");
+//         return;
+//     }
+//     if (number % 2 !== 0) {
+//         alert("لطفا یک عدد زوج وارد کنید");
+//         return;
+//     }
+//     if(number>10){
+//         alert("تعداد نفراتن باید از ده نفر کمتر باشد ");
+//         return;    
+//     }
+    
+//     else{
+
+//         containerStart.style.display="none"
+//         partAddUser.style.display='flex'
+//         console.log(selectorLevel.value )
+
+//         addButton.addEventListener('click',function(){
+//             let nameUserText=nameUser.value 
+//         if(nameUserText!==''){
+//             gamers.push(nameUserText)
+//             generator(nameUserText,number)        
+
+//         }
+        
+//     })
+        
+//     }
+    
+    
+    
+// })
+
+
+// // addButton.addEventListener('click',function(){
+// //     let nameUserText=nameUser.value 
+// //     generator(nameUserText)
+// // })
+
+
+// function generator(nameUserText,counter){
+//     // gamers.push(nameUserText)
+//     nameUser.value=''
+    
+//     if(counter===4){
+    
+//         const teamColor = gamers.length % 2 === 1 ? 'blue' : 'red';        
+//         if(gamers.length<=4){
+//                     users.insertAdjacentHTML("beforebegin",`<div class="user" style="background-color:${teamColor};" ><h3 class="delet">❌<h3><h1 class="name">${nameUserText}</h1></div>`)
+//                     return ;
+//                 }
+       
+//      }
+//     if(counter===6){
+//         const teamColor6 = gamers.length % 3 === 1 ? 'blue' :(gamers.length%3===2 ? "red":"green")
+//         if(gamers.length<=6){
+//         users.insertAdjacentHTML("beforebegin",`<div class="user" style="background-color:${teamColor6};" ><h3 class="delet">❌<h3><h1 class="name">${nameUserText}</h1></div>`)
+//             return;
+//     }
+            
+//     }
+    
+//     if(counter===8){
+     
+//         const teamColor8 = gamers.length % 4 === 1 ? 'blue' :(gamers.length%4===2 ? "red":(gamers.length%4===3 ? "green" :"pink"))
+
+//         if(gamers.length<=8){
+//         users.insertAdjacentHTML("beforebegin",`<div class="user" style="background-color:${teamColor8};" ><h3 class="delet">❌<h3><h1 class="name">${nameUserText}</h1></div>`)
+//             return;
+//     }   
+
+//     }
+
+//     if(counter===10){
+
+            
+//         const teamColor10 = gamers.length % 5 === 1 ? 'blue' :(gamers.length%5===2 ? "red":(gamers.length%5===3 ? "green" : (gamers.length%5===4? "pink":"black")))
+
+//         if(gamers.length<=10){
+//         users.insertAdjacentHTML("beforebegin",`<div class="user" style="background-color:${teamColor10};" ><h3 class="delet">❌<h3><h1 class="name">${nameUserText}</h1></div>`)
+//             return;
+//     }   
+
+
+
+//     }
+    
+
+
+// }
+
+
+
+
+
+    
+                        // newH3Word.addEventListener('click',function(){
+                        //     console.log(words[NumberRandom].word)                            
+                        // });
+                        
+                        // let intervalId = null;
+                                            
+                        // let timeLeft = 60;
+                        // if(counterPlayer==4){
+                        // if(player==gamers[0]||player==gamers[2]){
+
+                        //     let intervalId = setInterval(() => {
+                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                        //       newTime.innerHTML=timeLeft+"s"
+                        //       timeLeft--;
+                            
+                        //       if (timeLeft < 0) {
+                        //         clearInterval(intervalId);
+                        //         console.log("نوبت تموم شد!");
+
+                              
+                        //         // رفتن به نوبت بعدی...
+                              
+                        //     }
+                            
+                        // }, 1000);
+                            
+                            
+                        //     console.log('timer')
+                        
+                        //     newH3Word.addEventListener('click',function(){
+                        //         if(player==gamers[0]||gamers[2]){
+                        //             clearInterval(intervalId);
+                        //             count++
+                        //             console.log(words[count].word)
+
+                        //         }
+                                
+                            // });
+                        // }
+                        
+                        // let intervalId = null;  // فقط یه بار تعریف بیرون از شرط
+                        // let timeLeft = 60;
+                        
+                        // if (counterPlayer == 4) {
+                        //   if (player == gamers[0] || player == gamers[2]) {
+                        //     // فقط یک بار مقدار دهی
+                        //     intervalId = setInterval(() => {
+                        //       console.log("زمان باقی‌مانده: " + timeLeft + " ثانیه");
+                        //       newTime.innerHTML = timeLeft + "s";
+                        //       timeLeft--;
+                        
+                        //       if (timeLeft < 0) {
+                        //         clearInterval(intervalId);
+                        //         console.log("نوبت تموم شد!");
+                        //         // رفتن به نوبت بعدی...
+                        //       }
+                        //     }, 1000);
+                        
+                        //     console.log("timer");
+                        
+                        //     newH3Word.addEventListener("click", function () {
+                        //       clearInterval(intervalId);  // تایمر رو متوقف کن
+                        //       count++;
+                        //       console.log(words[count].word);
+                        //     });
+                        //   }
+                        // }
+                        
+
+                    
+
+
 
 
 /// code ai complated 
@@ -19,7 +213,7 @@ const playerList=document.querySelector('.players')
 // const nameUserShow=document.querySelector('.nameUser')
 // const acceptTick=document.querySelector('.accept')
 // const navbarTimer=document.querySelector('.navbarTime')
-
+    
 // console.log(nextBtnWord)
 
 let wordsLevelOne = [
@@ -849,7 +1043,8 @@ const wordsLevelTwo = [
     
 ];
 
-    const wordsLevelThree = [
+
+const wordsLevelThree = [
     { word: "پیشرفته۱", score: 30 },
     { word: "پیشرفته۲", score: 30 },
     // ... (کلمات سطح 3)
@@ -860,7 +1055,6 @@ const wordsLevelTwo = [
 let gamers = [];
 
 let totalPlayers = 0;
-
 
 
 btnRegister.addEventListener('click', function () {
@@ -1014,7 +1208,9 @@ function getWordsByLevel(level) {
                 }
         
 
-
+                let ScoreOdd=0
+                let scoreG1=0
+                let scoreG2=0
                 // let words
      startBtn.addEventListener('click',function(){
                     
@@ -1038,9 +1234,11 @@ function getWordsByLevel(level) {
                     console.log(counterPlayer)
                     
 
-                    let i;
-                    for(i=1;i<=gamers.length;i++){
- 
+                    
+                    gamers.forEach(function(player,index){
+                        console.log(player,index)
+                        
+                        
                         let newDivPlayer=document.createElement('div')
                         let newDivTopPart=document.createElement('div')
                         let newImgNext=document.createElement('img')
@@ -1064,7 +1262,7 @@ function getWordsByLevel(level) {
                         
                         //content in tag 
                         newH3Word.innerHTML=words[count].word
-                        newH2NameUser.innerHTML=gamers[i]
+                        newH2NameUser.innerHTML=player
                         newTime.innerHTML=100 +"s"
 
                         //add src image
@@ -1085,139 +1283,80 @@ function getWordsByLevel(level) {
                             // let words=getWordsByLevel(selectorLevel.value)
                             nextWord(newH3Word,words)
                         })
-            
+                        
                         count++;
-                    
                         
                         if(gamers.length==4){
                             
-                            let con=gamers.indexOf()
-                            console.log(con)
+                            console.log("length is 4 ");
+                            
+                          
+                            // let clickedIndex=new Set() 
+                            if(index===1){
+                                newImgAccept.addEventListener('click',function(){
+                                    console.log("sucsee",index)
+    
+                                        
+                                        scoreG1+=10
+                                    ScoreOdd=scoreG1+scoreG2
+                                    console.log("score2,1",ScoreOdd)
+                                    
+    
+                                    
+                                    // console.log("امتیاز گروه 1و3",ScoreOdd)
+                                    
+                                    
+                                    
+                                    console.log("score=",scoreG1,"Score:",scoreG2)
+                                });
+                            }
+                            if(index===3){
+                            newImgAccept.addEventListener('click',function(){
+                                console.log("sucsee",index)
+
+                                    
+                                
+                                    scoreG2+=10
+                                ScoreOdd=scoreG1+scoreG2
+                                console.log("score2,1",ScoreOdd)
+                                
+
+                                
+                                // console.log("امتیاز گروه 1و3",ScoreOdd)
+                                
+                                
+                                
+                            });
+                            console.log("score=",scoreG1,"Score:",scoreG2)
+                        }
+
+
+                            
+                            let curentCounter=60
+                            let WidthCounter=100
+                            
+                            if(index==1||index==3){
+                                
+                                let timmer=setInterval(()=>{
+                                    // console.log(curentCounter=curentCounter-0.5)
+                                    newTime.innerHTML=curentCounter--
+                                    newNavbarTime.style.width=WidthCounter-10 + "%";
+                                
+                                    // console.log("score=",scoreG1,"Score:",scoreG2)
+                                    // console.log("score2,1",ScoreOdd)
+
+                                },1000)
+                                setTimeout(()=>{
+                                    console.log('زمان تمام شده')
+                                    clearInterval(timmer)
+                                },60000)
+
+                            }
 
                         }
 
-                    }
-
                     
-
-
-                    // let isFlag=true
-                    // if (gamers.length === 4) {
-
-
-                        // if(gamers[0]=='sam')
-                        // console.log("sam")
-                        // let curetnTime=60
-                        // let index=0;
-                        
-                        // document.querySelector(".accept").addEventListener('click',function(){
-                        //         setInterval(() => {
-                            
-                        //     if(isFlag){
-                        //             console.log(gamers[index],curetnTime)
-                        //             // curetnTime=60
-                        //             index++;
-                        //             curetnTime--;
-                                    
-                        //             if(curetnTime<=0){
-                        //                 clearInterval()
-                                        
-                        //             }
-                        //         }
-                        //     })
-                                
-                        //     },10000);   
-
-
-
-
-
-                    // }
-
-
-                });
-
-                    
-
-                    
-                    // gamers.forEach(function(player){
-                    //     console.log(player)
-                        
-                        
-                    //     let newDivPlayer=document.createElement('div')
-                    //     let newDivTopPart=document.createElement('div')
-                    //     let newImgNext=document.createElement('img')
-                    //     let newH3Word=document.createElement('h3')
-                    //     let newH2NameUser=document.createElement('h2')
-                    //     let newImgAccept=document.createElement('img')
-                    //     let newNavbarTime=document.createElement('div')
-                    //     let newTime=document.createElement('h4')
-                        
-                    //     //class name HTML tag
-                    //     newDivPlayer.className='player';
-                    //     newDivTopPart.className='topPart'
-                    //     newImgNext.className='next'
-                    //     newH3Word.className='word'
-                    //     newH2NameUser.className='nameUser'
-                    //     newImgAccept.className='accept'
-                    //     newNavbarTime.className='navbarTime'
-                        
-                        
-                        
-                        
-                    //     //content in tag 
-                    //     newH3Word.innerHTML=words[count].word
-                    //     newH2NameUser.innerHTML=player
-                    //     newTime.innerHTML=100 +"s"
-
-                    //     //add src image
-                    //     newImgNext.src = "./images/icons8-next-50.png";
-                    //     newImgAccept.src = "./images/icons8-tick-50.png";
-                        
-                        
-                        
-                    //     newDivTopPart.append(newImgNext,newH3Word,newH2NameUser,newImgAccept)
-                    //     newNavbarTime.append(newTime)
-                    //     newDivPlayer.append(newDivTopPart, newNavbarTime);
-                    //     playerList.appendChild(newDivPlayer);
-                    
-
-
-
-                    //     newImgNext.addEventListener('click',function(){
-                    //         // let words=getWordsByLevel(selectorLevel.value)
-                    //         nextWord(newH3Word,words)
-                    //     })
-            
-                    //     count++;
-                    
-                    
-                    // });
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    });
                     
                     // if(gamers.length==4){
                     //     let currentTime = 60; // زمان شروع برای هر بازیکن
@@ -1263,12 +1402,7 @@ function getWordsByLevel(level) {
 
 
                     // }
-                   
                     
-
-
-
-
                     // let isFlag=true
                     // if (gamers.length === 4) {
 
@@ -1339,7 +1473,7 @@ function getWordsByLevel(level) {
             
                     
 
-                // })
+                })
                 
                 function nextWord(h3,words){
                     let NumberRandom=Math.floor(Math.random()*100)
@@ -1347,6 +1481,5 @@ function getWordsByLevel(level) {
                     h3.innerHTML=words[NumberRandom].word
                     
                 }
-
 
 
